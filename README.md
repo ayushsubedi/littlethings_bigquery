@@ -51,3 +51,26 @@ join_type:
     { INNER | CROSS | FULL [OUTER] | LEFT [OUTER] | RIGHT [OUTER] }
 
 ```
+
+
+### Standard Analytic Function Syntax
+
+```
+analytic_function_name ( [ argument_list ] ) OVER over_clause
+
+over_clause:
+  { named_window | ( [ window_specification ] ) }
+
+window_specification:
+  [ named_window ]
+  [ PARTITION BY partition_expression [, ...] ]
+  [ ORDER BY expression [ { ASC | DESC }  ] [, ...] ]
+  [ window_frame_clause ]
+
+window_frame_clause:
+  { rows_range } { frame_start | frame_between }
+
+rows_range:
+  { ROWS | RANGE }
+ 
+ ```
